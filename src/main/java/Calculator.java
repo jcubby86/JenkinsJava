@@ -1,6 +1,11 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Random;
 
 class Calculator {
+
+    static Random rand = new Random();
 
     Calculator(){
 
@@ -72,8 +77,17 @@ class Calculator {
     if you run this function twice with the same String input, it must return 2 unique String IDs
      */
     String createUniqueID(String n){
+        StringBuilder builder = new StringBuilder(n);
 
-        return null;
+        for (int i = 0; i < 20; i++){
+            int x = rand.nextInt(36);
+            if (x < 10){
+                builder.append(i);
+            } else {
+                builder.append('a' + (i - 10));
+            }
+        }
+        return builder.toString();
     }
 
 

@@ -79,7 +79,7 @@ class Calculator {
     String createUniqueID(String n){
         StringBuilder builder = new StringBuilder(n);
 
-        for (int i = 0; i < 20; i++){
+        for (int i = 0; i < 30; i++){
             int x = rand.nextInt(36);
             if (x < 10){
                 builder.append(i);

@@ -89,6 +89,7 @@ public class CalculatorTest {
 
     }
 
+    
     @Test
     public void intToBinaryNumberTest(){
         Calculator myCalculator = new Calculator();
